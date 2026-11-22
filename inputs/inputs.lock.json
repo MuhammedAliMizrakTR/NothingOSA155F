@@ -1,0 +1,155 @@
+{
+  "schema": "nothingosa155f.inputs/1",
+  "subject": "Samsung SM-A155F (Galaxy A15 4G, MT6789 / Helio G99), XSG region",
+  "recorded_utc": "2026-11-22T00:00:00Z",
+  "drive_folders": {
+    "GrapheneOS": "14cSvc-xj7tAciNzr8dJmNJj-8Avw3SsN",
+    "HyperOSA155F": "1bwiwO8EmnQdSyXSwfo7zSdBhBOXkRZ9f",
+    "NothingOSA155F": "184SfXD3X5-9jBgB5YnAsvgV2Sjg4Si6W"
+  },
+  "evidence_level": "drive-listing-only",
+  "notes": [
+    "MD5 values below are the ones Google Drive reports for the stored object.",
+    "Sizes are exact bytes from the Drive API listing.",
+    "No Nothing OS package of any version was present in the searched Drive scope on 2026-11-22.",
+    "The three *_A15_GKI.tar files are prebuilt Odin boot TARs, not kernel source trees.",
+    "GSI route added 2026-11-22: unofficial Nothing OS GSIs from Mystic GSI Updates (SourceForge). MD5s for those come from the project RSS feed, sizes are the listing's rounded values - both must be confirmed on the downloaded file.",
+    "Nothing OS 4.x = Android 16 and is built from the Phone (3a) 'Asteroids' framework; 'Metroid' = Phone (3) flagship. The 14/15/16 tokens in MysticGSI filenames are Android versions, not Nothing OS versions - there is no 'Nothing OS 14'.",
+    "Drive folder 'NothingOSA155F' (184SfXD3X5-9jBgB5YnAsvgV2Sjg4Si6W) created 2026-11-22 for GSI/artifact staging; at audit time it held only byte-identical copies of the pinned kernel TARs and the stock firmware (MD5s match).",
+    "GSI primary is staged in Drive folder NothingOSA155F (id 1shSCd0l5PveyzzC1Q9K-fnc63on6WHp_): size 2333520539 B, MD5 152a92ab392e1cab111f7e7474cec33c, identical to the SourceForge RSS value."
+  ],
+  "inputs": [
+    {
+      "role": "target-stock-firmware",
+      "name": "SAMFW.COM_SM-A155F_XSG_A155FXXS7CYG4_fac.zip",
+      "drive_id": "1nHfRBf92vi8aWAGmYf4BO8Vuy20J29Je",
+      "drive_folder": "GrapheneOS",
+      "size": 6904157493,
+      "md5": "bea1131d9bddabc5630411a982059b57",
+      "pinned_build": "A155FXXS7CYG4 / XSG / A155FOJM7CYG4",
+      "pinned_revision": "S7 (bootloader string), REV00",
+      "use": "rollback source and vendor/donor-framework base; never silently replaced"
+    },
+    {
+      "role": "target-stock-firmware-duplicate",
+      "name": "SAMFW.COM_SM-A155F_XSG_A155FXXS7CYG4_fac.zip adlı dosyanın kopyası",
+      "drive_id": "1DfFpvjS0PXm7KJKnTprB74aKgdTkvglu",
+      "drive_folder": "GrapheneOS",
+      "size": 6904157493,
+      "md5": "bea1131d9bddabc5630411a982059b57",
+      "use": "byte-identical duplicate of the target firmware; do not treat as a second build"
+    },
+    {
+      "role": "kernel-boot-artifact-candidate-1",
+      "name": "bakasu_35262_susfs_v2.4.0_A155FXXS7CYG4_A15_GKI.tar",
+      "drive_id": "19-UyisuuXf4XfK_dWirxAvgyly48dVyG",
+      "drive_folder": "GrapheneOS",
+      "size": 67112960,
+      "md5": "39800312d85035ff2c8f94bdf5f38054",
+      "use": "owner-preferred kernel artifact for the first build (contents unverified)"
+    },
+    {
+      "role": "kernel-boot-artifact-candidate-2",
+      "name": "kernelsunext_33548_susfs_v2.4.0_A155FXXS7CYG4_A15_GKI.tar",
+      "drive_id": "14IT6I5DA30bdDLEbnkf1l6w8rDmx49ni",
+      "drive_folder": "GrapheneOS",
+      "size": 67112960,
+      "md5": "472a59d49fcc94c4a66ff4186210cd65",
+      "use": "fallback kernel artifact; SusFS 2.4.0 build 33548"
+    },
+    {
+      "role": "kernel-boot-artifact-reference",
+      "name": "stock_optimized_5.10.226_A155FXXS7CYG4_A15_GKI.tar",
+      "drive_id": "1gvGa9VLuGbznIQVdLVyFp5XCDMs_LKt4",
+      "drive_folder": "GrapheneOS",
+      "size": 67112960,
+      "md5": "161fe2dbb5cfc5420727fd7f89ed9342",
+      "use": "known-good reference boot artifact; rollback target for the first build"
+    },
+    {
+      "role": "donor-gsi-primary",
+      "name": "Nothing-Asteroids-16-2511181551-AB-20260111-MysticGSI.zip",
+      "source": "https://sourceforge.net/projects/mystic-gsi-updates/files/Nothing/Nothing-Asteroids-16-2511181551-AB-20260111-MysticGSI.zip/download",
+      "size": 2333520539,
+      "size_display": "2.3 GB (listing, rounded)",
+      "md5": "152a92ab392e1cab111f7e7474cec33c",
+      "md5_source": "sourceforge-rss",
+      "android_major": 16,
+      "flavour": "AB GSI, unofficial Nothing OS port",
+      "use": "Nothing OS 4.x / Android 16 (Asteroids = Phone 3a). Owner's target and the build the pipeline is currently wired for; MD5 cross-verified between SourceForge and Drive.",
+      "device_codename": "Asteroids",
+      "device_model": "Nothing Phone (3a) / (3a) Pro",
+      "drive_id": "1shSCd0l5PveyzzC1Q9K-fnc63on6WHp_",
+      "drive_folder": "NothingOSA155F",
+      "md5_verified": "2026-11-22: Drive-reported MD5 == SourceForge RSS MD5 (152a92ab392e1cab111f7e7474cec33c); size 2333520539 B"
+    },
+    {
+      "role": "donor-gsi-fallback-a15-matched",
+      "name": "Nothing-Asteroids-15-2504171222-AB-20250508-MysticGSI.zip",
+      "source": "https://sourceforge.net/projects/mystic-gsi-updates/files/Nothing/Nothing-Asteroids-15-2504171222-AB-20250508-MysticGSI.zip/download",
+      "size": null,
+      "size_display": "2.0 GB (listing, rounded)",
+      "md5": "08b085d4facad07b00556d566a9fe2cb",
+      "md5_source": "sourceforge-rss",
+      "android_major": 15,
+      "flavour": "AB GSI, unofficial Nothing OS port",
+      "use": "Nothing OS 3.x / Android 15 (Asteroids = Phone 3a, same donor device as the OS4 build). Fallback #1: vendor-matched generation and mid-range donor.",
+      "device_codename": "Asteroids",
+      "device_model": "Nothing Phone (3a) / (3a) Pro"
+    },
+    {
+      "role": "donor-gsi-fallback-a15-flagship",
+      "name": "Nothing-Metroid-15-2507112047-AB-20250727-MysticGSI.zip",
+      "source": "https://sourceforge.net/projects/mystic-gsi-updates/files/Nothing/Nothing-Metroid-15-2507112047-AB-20250727-MysticGSI.zip/download",
+      "size": null,
+      "size_display": "3.0 GB (listing, rounded)",
+      "md5": "2e846c0273d95103e777c1b42804f5b1",
+      "md5_source": "sourceforge-rss",
+      "android_major": 15,
+      "flavour": "AB GSI, unofficial Nothing OS port",
+      "use": "Nothing OS 3.5 / Android 15 (Metroid = Phone 3, flagship donor). Heaviest of the three; third choice.",
+      "device_codename": "Metroid",
+      "device_model": "Nothing Phone (3)"
+    },
+    {
+      "role": "donor-gsi-legacy-a14",
+      "name": "Nothing-Spacewar-14-2407051617-AB-20240904-MysticGSI.zip",
+      "source": "https://sourceforge.net/projects/mystic-gsi-updates/files/Nothing/Nothing-Spacewar-14-2407051617-AB-20240904-MysticGSI.zip/download",
+      "size": null,
+      "size_display": "1.6 GB (listing, rounded)",
+      "md5": "282f3a70738921eac535ce756c7fc610",
+      "md5_source": "sourceforge-rss",
+      "android_major": 14,
+      "flavour": "AB GSI, unofficial Nothing OS port",
+      "use": "Nothing OS 2.6 / Android 14 (Spacewar = Phone 1). Note: '14' is the Android version, there is no 'Nothing OS 14'.",
+      "device_codename": "Spacewar",
+      "device_model": "Nothing Phone (1)"
+    },
+    {
+      "role": "donor-full-rom-motorola-emerald",
+      "name": "Emerald.tgz",
+      "drive_id": "1Ief4M6u7lwhfyVfOegYc1O37RjrndhUe",
+      "drive_folder": "HyperOSA155F",
+      "size": 7664845630,
+      "md5": null,
+      "donor_identity": "emerald_id_global_images_OS3.0.303.0.WNFIDXM_16.0 (Motorola, MT6789, Android 16)",
+      "use": "same-SoC cross-vendor donor; NOT a Nothing OS image"
+    }
+  ],
+  "sources": {
+    "mystic_gsi_nothing": "https://sourceforge.net/projects/mystic-gsi-updates/files/Nothing/",
+    "mystic_gsi_rss": "https://sourceforge.net/projects/mystic-gsi-updates/rss?path=/Nothing"
+  },
+  "artifacts": {
+    "note": "Produced artifacts are additive; never deleted or renamed.",
+    "single_file_runner": {
+      "name": "NothingOSA155F-colab.sh",
+      "drive_folder": "NothingOSA155F",
+      "size": 125009,
+      "generated_by": "bash tools/make_single_file.sh",
+      "use": "one-file Colab runner: header (colab_build.sh) + base64 source zip; provisions toolchain itself",
+      "integrity": "no fixed hash or id is pinned, so that this lock file can itself travel inside the payload: the builder prints the sha256 of the bytes it wrote, compare it with `sha256sum NothingOSA155F-colab.sh` after download",
+      "published_as": "Drive folder NothingOSA155F / NothingOSA155F-colab.sh (check the folder listing for the current file)"
+    }
+  }
+}
