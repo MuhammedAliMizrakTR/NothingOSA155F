@@ -1,0 +1,21 @@
+# build outputs and downloaded inputs never enter git
+out/
+build/
+dist/
+*.tar
+*.tar.md5
+*.zip
+*.tgz
+*.gz
+*.img
+*.img.lz4
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# cloned toolchain and build workspace (provisioned by rom/tools.sh)
+tools/lptools/
+tools/avb/
+tools/lz4/
+tools/e2fsprogs/
+work/
